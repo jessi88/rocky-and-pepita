@@ -1,0 +1,68 @@
+/*
+ * Book tokens — "a picture book found on a windowsill".
+ * Light = Chapter 1's sunny October morning. Dark = the same book at night.
+ * All colours are hex so the style tile can measure their contrast live.
+ * Contrast vs. --paper (WCAG): text tokens ≥ 4.5:1, chart marks ≥ 3:1,
+ * except --mark-muted, which is deliberately quiet context.
+ */
+
+:root {
+  /* Paper & ink */
+  --paper: #f6eedc; /* warm uncoated cream */
+  --paper-raised: #fbf6ea; /* the reading page, a shade lighter than the desk */
+  --paper-deep: #ecdfc4; /* desk under the page, card wells */
+  --ink: #2a221c; /* body text — 13.5:1 */
+  --ink-soft: #5e5045; /* captions, secondary text — 6.7:1 */
+  --rule: #d9cdb6; /* hairlines, gridlines */
+
+  /* October accents */
+  --sunlight: #d9a033; /* fills & decoration only (2.0:1) */
+  --sunlight-ink: #8c5e12; /* gold text — 4.9:1 */
+  --acorn: #7e4e25; /* primary accent, links, buttons — 6.0:1 */
+  --crow: #1e2530; /* crow blue-black — 13.3:1 */
+  --glass: #7fa6b8; /* window glass, fills only (2.3:1) */
+  --glass-ink: #3b6476; /* glass-blue text — 5.6:1 */
+  --dusk: #b87668; /* dusk rose, chart mark — 3.1:1 */
+
+  /* Chart marks */
+  --mark-highlight: #b57a12; /* the one highlighted mark — 3.2:1 */
+  --mark-muted: #a0927f; /* everything else — quiet context */
+
+  /* Polaroid card */
+  --card-photo: #fdfaf3;
+
+  /* Duotone endpoints — keep in sync with the filters in components/book/SvgDefs.tsx */
+  --duo-shadow: #2a221c;
+  --duo-mid: #a8742c;
+  --duo-light: #f6eedc;
+
+  --page-shadow: 0 1px 2px rgb(60 40 20 / 0.08), 0 12px 32px -8px rgb(60 40 20 / 0.18);
+}
+
+.dark {
+  --paper: #1d1b21; /* soft night, never pure black */
+  --paper-raised: #232128;
+  --paper-deep: #17161b;
+  --ink: #ede5d6; /* 13.6:1 */
+  --ink-soft: #b9ad9c; /* 7.7:1 */
+  --rule: #38343d;
+
+  --sunlight: #e3b04f;
+  --sunlight-ink: #e8bd68;
+  --acorn: #c9935f;
+  --crow: #a9b8cc; /* moonlit crow, so it stays visible */
+  --glass: #86b2c6;
+  --glass-ink: #9cc3d4;
+  --dusk: #d98f84;
+
+  --mark-highlight: #e3b04f;
+  --mark-muted: #6e6873;
+
+  --card-photo: #2b2830;
+
+  --duo-shadow: #15141a;
+  --duo-mid: #3f5f72;
+  --duo-light: #e2d6bf;
+
+  --page-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -8px rgb(0 0 0 / 0.6);
+}

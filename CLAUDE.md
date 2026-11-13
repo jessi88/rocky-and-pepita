@@ -42,6 +42,10 @@ Extra ideas for review: "Dear Data"-style personal tracking chapters; "Where the
 - **Art direction**: "a picture book found on a windowsill" — paper grain, soft page shadow, slight ink wobble on decorative frames only (charts stay precise). Charts built on the story's own objects (crows on a railing, window-pane waffle, cat activity clock).
 - **Motion**: slow gentle reveals (0.5–1 s) on scroll; everything off with `prefers-reduced-motion`.
 
+## Where things live
+- Colour tokens: `src/styles/tokens.css` (hex, light + `.dark`); type scale, fonts and shadcn mapping: `src/index.css`. shadcn components get the book look through these tokens, not per-component edits.
+- Style tile for review: `#/style-tile` (`src/style-tile/`). Shared pieces: `components/book` (SvgDefs filters, RailingProgress, Sidenote), `components/illustrations` (placeholder line art), `components/photo`, `components/viz`.
+
 ## Charts
 - Follow `.claude/skills/d3/SKILL.md`: D3 for math only, React renders SVG; `MARGIN` + bounds pattern; axes as React components; shared `useDimensions` hook + `Responsive*` wrapper; `motion/react` for animation with `useReducedMotion`. No shadcn `chart` (Recharts).
 - Check each chart with `.claude/skills/roast-my-chart` and fix 🔴/🟠 items: sorted bars, zero-based bar axes, no rainbow, annotate instead of legends, text ≥ 14px.
